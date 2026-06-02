@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinos Chapman   <span class="grosseskreuz2">❌</span> Sensation 2026</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/SerifbabeAlphaTrial-Regular.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-ExtraLight.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-Thin.otf">
+    <link rel="icon" href="pictures/favicon.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="pictures/favicon-white.svg" media="(prefers-color-scheme: dark)">
+    <script>
+        function setFavicon() {
+            const favicon = document.getElementById("favicon");
+            const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            favicon.href = dark ? "pictures/favicon.svg" : "pictures/favicon-white.svg";
+        }
+        setFavicon();
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+    </script>
+    <link rel="preload" href="landing.html" as="document">
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src='js/Draggable.min.js' defer></script>
+    <script src="burger-menu.js" defer></script>
+    <script src="js/marquee-script.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="projectpage">
+    <header>
+        <div class="navigation2">
+            <div class="about2">
+                <a href="about.html">About</a>
+            </div>
+            <div class="headline2">
+                <a href="index.html">
+                    <h1>FC Style </h1>
+                </a>
+            </div>
+            <div class="contact2">
+                <a href="Imprint.html">Imprint</a>
+            </div>
+            <!-- RESPONSIVE BURGER MENU -->
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+    <!-- OVERLAY BURGER MENU -->
+    <div class="overlay2" id="overlay2">
+		<div class="menu-close">
+			<button type="button" aria-label="Close menu" class="unstyled-button">
+				<img src="pictures/cursor.png" alt="Focus Style Magazine" width="108" height="106" title="image">
+			</button>
+		</div>
+        <div class="menu">
+            <ul>
+                <li><a title="link" href="about.html">About</a></li>
+                <li><a title="link" href="Imprint.html">Imprint</a></li>
+                <li><a title="link" href="https://www.instagram.com/focus_style_magazin/">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="story-outer-inner ">
+        <div class="news_ticker">
+            <ul class="news-group">
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_01.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_02.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_03.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_04.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_05.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_06.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_07.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_08.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_09.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_10.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_11.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_12.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_13.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_14.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_15.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_16.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_17.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_18.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_19.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_20.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                 <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                
+
+				
+
+            </ul>
+        </div>
+        <div class="news_ticker reverces-animaction">
+            <ul class="news-group">
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_21.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_22.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_23.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_24.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_25.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_26.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_27.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_28.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_29.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_30.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_31.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_32.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_33.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_34.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_35.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_36.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_37.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_38.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_39.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+               
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR20/FC-STYLE-Dinos-Chapman-Sensation-2026_40.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+
+                 
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="projecttext1">
+        <p>
+           Dinos Chapman   <span class="grosseskreuz2">❌</span> Sensation 2026
+
+        </p>
+    </div>
+
+  <div class="projecttext2">
+        <p> <span class="impressum">IMPRINT</span></p>
+        <p class="f-text">
+
+            EDITOR IN CHIEF Jörg Harlan Rohleder CREATIVE DIRECTOR Mike Meiré VISUAL DIRECTOR Frank Seidlitz FASHION DIRECTOR Alexander Gabriel
+CHEFS VOM DIENST Sonja Wiggermann, Christian Stein (Stv.) AUTOREN Heike Blümner (frei), Mark van Huisseling (frei), Barbara Jung-Arntz (Redaktion), Harald Peters (frei)
+LAYOUT Tim Giesen (Meiré und Meiré), Katharina Sörgel BILDREDAKTION Franziska Anastasia Lentes (frei) DOKUMENTATION Jochen Bausback, Marie Vassan
+COVER UND TITELSTORY Fotograf Andreas Mühe Styling Alexander Gabriel Artworks ©︎ Jake and Dinos Chapman. All Rights Reserved, DACS 2026, VG Bild-Kunst, Bonn, 2026
+Post Production Heide Kränzlein Special Thanks Gisela & Balthazar Getty, Scumeck Sabottka, In-N-Out Burger
+PRODUCTION FASHION Fotograf Ioannes Papadakis Styling Alexander Gabriel Hair Attila Kenyeres Make-up Kenny Campbell Light Operator Dominik Ehrengruber Movement Director Leonardo D’Aquino Creative Producer
+Jerome Glock Casting White Casting Models Chubath @ TWO Management, Lars @ Rapture Management, Jun @ Kult Management Photo Assistant Johanna Kirsch Styling Assistant Sabina Schimanowski
+Special Thanks Hagius - Holistic Sports Club Berlin
+PRODUCTION UHREN Fotografen Brandl-Utzt Styling Alexander Posch Art Direction Frank Seidlitz
+ REPRO Michael Schätzl, Mirko Vezmar SCHLUSSREDAKTION Lektornet GmbH, Hamburg DRUCK appl druck GmbH, Senefelder Str. 3, 86650 Wemding
+VERLAG FOCUS STYLE erscheint in der BurdaVerlag Publishing GmbH, Hubert-Burda-Platz 1, 77652 Offenburg,
+Chefredaktion Franziska Reich und Georg Meck (V.i.S.d.P.), FOCUS Redaktion, Heiligegeistkirchplatz 1, 10178 Berlin, redaktion@focus-magazin.de;
+Vervielfältigung, Speicherung und Nachdruck ist nur mit schriftlicher Genehmigung des Verlags gestattet. Datenschutzanfrage focus@datenschutzanfrage.de
+PUBLISHER MANAGEMENT FOCUS STYLE Corinna Schmid, Tel.: 089/9250-3438, corinna.schmid@burda.com
+ANZEIGEN Brand Community Network GmbH Arabellastraße 23, 81925 München. Es gilt die aktuelle Anzeigenpreisliste, siehe bcn.burda.de
+VERLEGER Dr. Hubert Burda GESCHÄFTSFÜHRUNG Manuela Kampp-Wirtz, Elisabeth Varn BRAND DIRECTOR NEWS Matthias Frei
+
+            
+       
+        </p>
+    </div>
+    <div class="spacer"> <br></div>
+
+
+
+
+
+
+
+    <div class="footer">
+        <div class="textfooter">
+            <a href="https://www.instagram.com/focus_style_magazin/" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Diese Funktion wird aufgerufen, wenn die Seite geladen ist
+        window.onload = function () {
+            // Die URL ohne den Dateinamen "homepage.html"
+            var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/fcstylenummer9\.html$/, '/');
+            // Ändern der URL
+            window.history.replaceState({}, document.title, newUrl);
+        }; 
+    </script>
+
+
+</body>
+
+</html>

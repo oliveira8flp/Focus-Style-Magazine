@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nr.17 Rainer Langhans ✕ Andreas Mühe</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/SerifbabeAlphaTrial-Regular.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-ExtraLight.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-Thin.otf">
+    <link rel="icon" href="pictures/favicon.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="pictures/favicon-white.svg" media="(prefers-color-scheme: dark)">
+    <script>
+        function setFavicon() {
+            const favicon = document.getElementById("favicon");
+            const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            favicon.href = dark ? "pictures/favicon.svg" : "pictures/favicon-white.svg";
+        }
+        setFavicon();
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+    </script>
+    <link rel="preload" href="landing.html" as="document">
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src='js/Draggable.min.js' defer></script>
+    <script src="burger-menu.js" defer></script>
+    <script src="js/marquee-script.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="projectpage">
+    <header>
+        <div class="navigation2">
+            <div class="about2">
+                <a href="about.html">About</a>
+            </div>
+            <div class="headline2">
+                <a href="index.html">
+                    <h1>FC Style </h1>
+                </a>
+            </div>
+            <div class="contact2">
+                <a href="Imprint.html">Imprint</a>
+            </div>
+            <!-- RESPONSIVE BURGER MENU -->
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+    <!-- OVERLAY BURGER MENU -->
+    <div class="overlay2" id="overlay2">
+		<div class="menu-close">
+			<button type="button" aria-label="Close menu" class="unstyled-button">
+				<img src="pictures/cursor.png" alt="Focus Style Magazine" width="108" height="106" title="image">
+			</button>
+		</div>
+        <div class="menu">
+            <ul>
+                <li><a title="link" href="about.html">About</a></li>
+                <li><a title="link" href="Imprint.html">Imprint</a></li>
+                <li><a title="link" href="https://www.instagram.com/focus_style_magazin/">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="story-outer-inner ">
+        <div class="news_ticker">
+            <ul class="news-group">
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_01.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_02.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_03.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_04.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_05.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_06.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_07.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_08.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_09.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_10.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_11.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_12.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_13.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_14.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_15.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_16.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_17.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_18.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_19.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="news_ticker reverces-animaction">
+            <ul class="news-group">
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_20.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_21.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_22.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_23.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_24.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_25.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_26.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_27.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_28.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_29.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_30.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_31.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_32.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_33.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_34.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_35.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_36.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_37.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/NR17/FC_STYLE_Rainer Langhans_X_Andreas Muehe_STUDIO_LAST_MATTHIAS_LAST_Seite_38.avif"
+                            width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager"
+                            onclick="showImage(this.src)">
+                    </div>
+                </li>
+                <li>
+                    <div class="ticker-image">
+                        <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="320"
+                            height="492">
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="projecttext1">
+        <p>
+            Nr.17 &nbsp;&nbsp; Rainer Langhans <span class="grosseskreuz2">❌</span> Andreas Mühe
+
+        </p>
+    </div>
+
+  <div class="projecttext2">
+        <p> <span class="impressum">IMPRINT</span></p>
+        <p class="f-text">
+
+            EDITOR IN CHIEF Jörg Harlan Rohleder CREATIVE DIRECTOR Matthias Last/Studio Last (extern) VISUAL DIRECTOR Frank Seidlitz FASHION DIRECTOR AT LARGE Alexander Gabriel <br>
+            CHEFS VOM DIENST Sonja Wiggermann, Christian Stein (Stv.) AUTOREN Heike Blümner (frei), Mark van Huisseling (frei), Barbara Jung-Arntz (Redaktion), Harald Peters (frei)
+            LAYOUT Matthias Last/Studio Last (extern), Katharina Sörgel BILDREDAKTION Franziska Anastasia Lentes (frei), DOKUMENTATION Jochen Bausback, Bernd Hempeler, Susanne Ullrich<br>
+            PRODUCTION COVER UND TITELSTORY Fotografen Roman Goebel & Jelka von Langen Fashion Director Alexander Gabriel Art Direction Frank Seidlitz Grooming Ramona Heintz Special Thanks Miriam Mack, Diana Reichle,
+            Matthias Tubaj, Jens Bußhart, Jonas Hemmerich PRODUCTION FASHION Fotograf Nicolas Schwaiger Creative Direction & Styling Toby Grimditch Hair Wataru Suzuki using Oribe Model Rogier Bosschaart @ success Models
+            Production Joelle Flacke Junior Producer Justin Lahmer Location Management Holger Oloff-Geissler Gaffer Anton Andalus Digital Assistant Lukas Wenn Styling Assistants Lena Lauer, Ekaterina Samorukova
+            Special Thanks San Gimigiano Lichtenberg PRODUCTION UHREN Fotografen Brandl-Utzt Styling Alexander Posch Art Direction Frank Seidlitz
+
+
+            
+       
+        </p>
+    </div>
+    <div class="spacer"> <br></div>
+
+
+
+
+
+
+
+    <div class="footer">
+        <div class="textfooter">
+            <a href="https://www.instagram.com/focus_style_magazin/" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Diese Funktion wird aufgerufen, wenn die Seite geladen ist
+        window.onload = function () {
+            // Die URL ohne den Dateinamen "homepage.html"
+            var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/fcstylenummer9\.html$/, '/');
+            // Ändern der URL
+            window.history.replaceState({}, document.title, newUrl);
+        }; 
+    </script>
+
+
+</body>
+
+</html>

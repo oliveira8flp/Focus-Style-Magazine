@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nr.14 Lucky Love ✕ Masculinity</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/SerifbabeAlphaTrial-Regular.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-ExtraLight.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-Thin.otf">
+    <link rel="icon" href="pictures/favicon.svg" media="(prefers-color-scheme: light)">
+		<link rel="icon" href="pictures/favicon-white.svg" media="(prefers-color-scheme: dark)">
+		<script>
+		function setFavicon() {
+			const favicon = document.getElementById("favicon");
+			const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+			favicon.href = dark ? "pictures/favicon.svg" : "pictures/favicon-white.svg";
+		}
+		setFavicon();
+		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+		</script>	
+    <link rel="preload" href="landing.html" as="document">
+	<script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src='js/Draggable.min.js' defer></script>
+    <script src="burger-menu.js" defer></script>
+    <script src="js/marquee-script.js" defer></script>
+    <script src="script.js" defer></script>
+    </head>
+    <body class="projectpage">
+        <header>
+            <div class="navigation2">
+                <div class="about2">
+                <a href="about.html">About</a>
+                </div>
+                <div class="headline2">
+                <a href="index.html"><h1>FC Style </h1></a>
+                </div>
+                <div class="contact2">
+                <a href="Imprint.html">Imprint</a>
+                </div>
+                 <!-- RESPONSIVE BURGER MENU -->
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            </div>
+        </header>
+           <!-- OVERLAY BURGER MENU -->
+   <div class="overlay2" id="overlay2">
+		<div class="menu-close">
+			<button type="button" aria-label="Close menu" class="unstyled-button">
+				<img src="pictures/cursor.png" alt="Focus Style Magazine" width="108" height="106" title="image">
+			</button>
+		</div>
+				<div class="menu">
+					<ul>
+						<li><a title="link" href="about.html">About</a></li>
+						<li><a title="link" href="Imprint.html">Imprint</a></li>
+						<li><a title="link" href="https://www.instagram.com/focus_style_magazin/">Instagram</a></li>
+					</ul>
+				</div>
+			</div>
+   <div class="story-outer-inner ">
+	<div class="news_ticker">
+		<ul class="news-group">
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_1.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism"  loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_2.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_3.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_4.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_5.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_6.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_7.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_8.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_9.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_10.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_11.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_12.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_13.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_14.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_15.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_16.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_17.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_18.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_19.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="news_ticker reverces-animaction">
+		<ul class="news-group">
+            <li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_20.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_21.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_22.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_23.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_24.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_25.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_26.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_27.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_28.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_29.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_30.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_31.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_32.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_33.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism"  loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_34.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_35.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_36.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_37.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+		 
+             
+			<li>
+				<div class="ticker-image">
+					<img src="pictures/NR14/FC Style_Lucky Love x Masculinity_Matthias Last_Studio Last_Seite_39.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+				</div>
+			</li>
+		 <li>
+				<div class="ticker-image">
+					<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+				</div>
+			</li>
+            
+		</ul>
+	</div>
+</div>
+           
+             
+            <div class="projecttext1">
+                <p>
+                    Nr.14 &nbsp;&nbsp; Lucky Love  <span class="grosseskreuz2">❌</span> Masculinity
+                
+                </p>
+            </div>
+
+
+
+
+
+      
+
+
+
+
+
+
+            <div class="projecttext2">
+                <p> <span class="impressum">IMPRINT</span></p>
+                                <p  class="f-text">
+
+                    EDITOR IN CHIEF Jörg Harlan Rohleder CREATIVE DIRECTOR Matthias Last/Studio Last (extern) VISUAL DIRECTOR Frank Seidlitz<br> FASHION DIRECTOR AT LARGE Alexander Gabriel
+                    CHEFS VOM DIENST Sonja Wiggermann, Christian Stein (Stv.) REDAKTION Barbara Jung-Arntz AUTOREN Heike Blümner, Mark van Huisseling, Harald Peters
+                    LAYOUT Katharina Sörgel BILDREDAKTION Franziska Anastasia Lentes (extern) DOKUMENTATION Susanne Ullrich PRODUCTION COVER UND TITELSTORY Fotograf Michele Di Dio Styling Max Jolivet
+                    Art Direction Frank Seidlitz Hair Romain Durand Make-up Swan Arnaud Photo Assistants Anthony Peyper, Viktor Verana Styling Assistant Nataliia Shkurkina Production Angels Production Special Thanks Nord Est Studio
+                    PRODUCTION FASHION Fotografin Annette Apel Fashion Director Alexander Gabriel Hair & Make-up Gabrielle Theurer @ basics.berlin Set Design Lilo Klinkenberg Casting Chisom Abuba @ White Casting
+                    Production David Mitzkus Models Maty @ FocusModel, Lauri @ thesisterhood Photo Assistants Kristina Weinhold, Arne Vossfeldt Styling Assistant Florian Winges
+                    PRODUCTION UHREN Fotograf Michael Wong Styling Alexander Posch Art Direction Frank Seidlitz Hair & Make-up Jane Jakobi @ ARTNEST
+                    Model Jakob Weissbarth @ IZAIO Management Photo Assistant Tobias Friedauer Styling Assistant Maciej Kuczyński Special Thanks Milk City Studio
+                    SCHLUSSREDAKTION Lektornet GmbH, Hamburg REPRO Mirko Vezmar DRUCK appl druck GmbH, Senefelder Str. 3, 86650 Wemding
+                    VERLAG FOCUS STYLE erscheint in der BurdaVerlag Publishing GmbH, Hubert-Burda-Platz 1, 77652 Offenburg, Chefredaktion Franziska Reich und Georg Meck (V.i.S.d.P),
+                    FOCUS Redaktion, Heiligegeistkirchplatz 1, 10178 Berlin, redaktion@focus-magazin.de; Vervielfältigung, Speicherung und Nachdruck ist nur mit schriftlicher Genehmigung
+                    des Verlags gestattet. Datenschutzanfrage focus@datenschutzanfrage.de PUBLISHER MANAGEMENT FOCUS STYLE Corinna Schmid, Tel.: 0 89/92 50-34 38,
+                    corinna.schmid@burda.com ANZEIGEN Brand Community Network GmbH Arabellastraße 23, 81925 München. Es gilt die aktuelle Anzeigenpreisliste, siehe bcn.burda.de.
+                    VERLEGER Dr. Hubert Burda GESCHÄFTSFÜHRUNG Manuela Kampp-Wirtz, Elisabeth Varn BRAND DIRECTOR NEWS Matthias Frei  
+                </p>
+            </div>
+            <div class="spacer"> <br></div>
+           
+   
+
+
+
+
+
+    <div class="footer"> 
+        <div class="textfooter">
+            <a href="https://www.instagram.com/focus_style_magazin/" target="_blank">Instagram</a>
+        </div>
+    </div>
+   
+
+
+    <script>
+        // Diese Funktion wird aufgerufen, wenn die Seite geladen ist
+        window.onload = function() {
+         // Die URL ohne den Dateinamen "homepage.html"
+         var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/fcstylenummer9\.html$/, '/');
+         // Ändern der URL
+         window.history.replaceState({}, document.title, newUrl);
+       }; 
+   </script>
+
+    </body>   
+</html>

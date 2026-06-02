@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nr.5 Víkingur Ólafsson ✕ Classic Couture</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/SerifbabeAlphaTrial-Regular.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-ExtraLight.otf">
+    <link rel="stylesheet" type="text/css" href="fonts/PPEiko-Thin.otf">
+    <link rel="icon" href="pictures/favicon.svg" media="(prefers-color-scheme: light)">
+		<link rel="icon" href="pictures/favicon-white.svg" media="(prefers-color-scheme: dark)">
+		<script>
+		function setFavicon() {
+			const favicon = document.getElementById("favicon");
+			const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+			favicon.href = dark ? "pictures/favicon.svg" : "pictures/favicon-white.svg";
+		}
+		setFavicon();
+		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+		</script>	
+    <link rel="preload" href="landing.html" as="document">
+	<script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src='js/Draggable.min.js' defer></script>
+    <script src="burger-menu.js" defer></script>
+    <script src="js/marquee-script.js" defer></script>
+    <script src="script.js" defer></script> 
+    </head>
+    <body class="projectpage">
+        <header>
+            <div class="navigation2">
+                <div class="about2">
+                <a href="about.html">About</a>
+                </div>
+                <div class="headline2">
+                <a href="index.html"><h1>FC Style </h1></a>
+                </div>
+                <div class="contact2">
+                <a href="Imprint.html">Imprint</a>
+                </div>
+                 <!-- RESPONSIVE BURGER MENU -->
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            </div>
+        </header>
+           <!-- OVERLAY BURGER MENU -->
+   <div class="overlay2" id="overlay2">
+		<div class="menu-close">
+			<button type="button" aria-label="Close menu" class="unstyled-button">
+				<img src="pictures/cursor.png" alt="Focus Style Magazine" width="108" height="106" title="image">
+			</button>
+		</div>
+				<div class="menu">
+					<ul>
+						<li><a title="link" href="about.html">About</a></li>
+						<li><a title="link" href="Imprint.html">Imprint</a></li>
+						<li><a title="link" href="https://www.instagram.com/focus_style_magazin/">Instagram</a></li>
+					</ul>
+				</div>
+			</div>
+   <div class="story-outer-inner ">
+				<div class="news_ticker">
+					<ul class="news-group">
+						<li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_1.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism"  loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+						 <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_2.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+                                <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_3.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_4.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+                                <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_5.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								 <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_6.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                     
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_7.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_8.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                     
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_9.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_10.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                     
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_11.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_12.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                     
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_13.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								 <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_14.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                     
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_15.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+							</div>
+						</li>
+                     
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_16.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                   
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_17.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								  <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_18.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_19.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								  <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_20.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_21.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)"> 
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658"> 
+							</div>
+						</li>
+					</ul>
+				</div>
+
+                <div class="news_ticker reverces-animaction">
+					<ul class="news-group">
+						 
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_22.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_23.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_24.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_25.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_26.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_27.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								                    <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_28.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_29.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_30.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_31.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_32.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_33.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism"  loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_34.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_35.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_36.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_37.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_38.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+                    
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								<img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_39.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                        <li>
+							<div class="ticker-image">
+								<img src="pictures/white.png" fetchpriority="high" alt="Focus Style Magazine" title="image" width="428" height="658">
+							</div>
+						</li>
+                         <li>
+							<div class="ticker-image">
+								 <img src="pictures/NR5/1710935155874-7612c626-250d-4920-bb63-9221802703ae_40.avif" width="428" title="image" height="658" alt="Focus Style Magazine. High Fashion and High Class Journalism" loading="eager" onclick="showImage(this.src)">
+							</div>
+						</li>
+                         
+                         
+
+						  
+					</ul>
+				</div>
+			</div>
+          
+            <div class="projecttext1">
+                <p>
+                    Nr.5 &nbsp;&nbsp;Víkingur Ólafsson <span class="grosseskreuz2">❌</span> Classic Couture
+                
+                </p>
+            </div>
+            <div class="projecttext2">
+                <p> <span class="impressum">IMPRINT</span></p>
+                                <p  class="f-text">
+
+                    EDITOR IN CHIEF Jörg Harlan Rohleder CREATIVE DIRECTOR Matthias Last/Studio Last (extern) VISUAL DIRECTOR Frank Seidlitz<br>
+                    CHEFS VOM DIENST Sonja Wiggermann, Christian Stein REDAKTION Jobst-Ulrich Brand, Barbara Jung-Arntz AUTOREN Heike Blümner, Max Dax, Laura Ewert, Mark van Huisseling, Thilo Mischke, Harald Peters, Alexander Posch LAYOUT Katharina Sörgel BILDREDAKTION Franziska Lentes (frei) PRODUCTION COVER UND TITELSTORY Photography Markus Jans Styling Tabassom Charaf Grooming Eva Dieckhoff,
+                    Art Direction & Creative Production Frank Seidlitz Photography Assistance Thilo Grau Special Thanks Residenz des isländischen Botschafters PRODUCTION FASHION Photography Tereza Mundilová
+                    Fashion Director Alexander Gabriel Production David Mitzkus Hair Ruby Howes Grooming Naomzz Set Design Stefanie Grau Casting Chisom Abuba @ White Casting Models Przemek @ Modelplus, Leebo @ Success Models, Max @ Morfosi Milano, Alejandro @ Tune Models Photo Assistant Max Zimmermann Styling Assistant Joshua von Pruski Set Design Assistant Arabella Romen Studio Kmx Studio Retouch Nitty Gritty PRODUCTION UHREN Photography Theresa Kaindl Styling Alexander Posch Grooming Sascha Wobido Photo Assistant Benjamin Heinrich Styling Assistant Maciej Kuczyński
+                    Model Erik Frey @ Wienermodels Casting Martin Freimoser DOKUMENTATION Susanne Ullrich REPRO/HERSTELLUNG Jeannette Finger
+                    SCHLUSSREDAKTION Lektornet GmbH, Hamburg DRUCK appl druck GmbH, Senefelder Str. 3, 86650 Wemding
+                    VERLAG FOCUS STYLE erscheint in der FOCUS Magazin Verlag GmbH, Arabellastraße 23, 81925 München. V.i.S.d.P. Chefredakteur Robert Schneider, FOCUS Redaktion,
+                    Potsdamer Straße 7, 10785 Berlin, redaktion@focus-magazin.de; Vervielfältigung, Speicherung und Nachdruck ist nur mit schriftlicher Genehmigung des Verlags gestattet.
+                    Datenschutzanfrage focus@datenschutzanfrage.de PUBLISHER MANAGEMENT FOCUS STYLE Corinna Schmid, Tel.: 089/9250-3438, corinna.schmid@burda.com
+                    Verantwortlich für den Anzeigenteil Doris Braß, AdTech, Hauptstraße 127, 77652 Offenburg. Es gilt die aktuelle Anzeigenpreisliste, siehe bcn.burda.de
+                    VERLEGER Dr. Hubert Burda GESCHÄFTSFÜHRUNG Manu4ela Kampp-Wirtz, Philipp Welte BRAND DIRECTOR Andrea Laub
+                </p>
+            </div>
+            <div class="spacer"> <br></div>
+           
+    
+
+
+
+
+    <div class="footer"> 
+        <div class="textfooter">
+            <a href="https://www.instagram.com/focus_style_magazin/" target="_blank">Instagram</a>
+        </div>
+    </div>
+   
+
+
+
+
+    <script>
+        // Diese Funktion wird aufgerufen, wenn die Seite geladen ist
+        window.onload = function() {
+         // Die URL ohne den Dateinamen "homepage.html"
+         var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/fcstylenummer5\.html$/, '/');
+         // Ändern der URL
+         window.history.replaceState({}, document.title, newUrl);
+       };
+   </script>
+
+
+    </body>   
+</html>

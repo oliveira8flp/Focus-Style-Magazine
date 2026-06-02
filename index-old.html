@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAMPLE</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+  <link rel="icon" href="pictures/favicon.svg" media="(prefers-color-scheme: light)">
+		<link rel="icon" href="pictures/favicon-white.svg" media="(prefers-color-scheme: dark)">
+		<script>
+		function setFavicon() {
+			const favicon = document.getElementById("favicon");
+			const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+			favicon.href = dark ? "pictures/favicon.svg" : "pictures/favicon-white.svg";
+		}
+		setFavicon();
+		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+		</script>	
+</head>
+<body>
+
+<!-- CONTENT (versteckt bis Passwort korrekt) -->
+<div class="content" id="content" style="display: none;">
+  <!-- Progressbar -->
+  <div id="progressBarTop"><div id="progressTop"></div></div>
+  <div id="progressBarBottom"><div id="progressBottom"></div></div>
+
+  <!-- Desktop Video -->
+  <div class="indexcontent">
+    <video autoplay loop muted playsinline>
+      <source src="pictures/Intro Video Focus Style_by Studio Last_Desktop.mp4" loading="eager" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Mobile Video -->
+  <div class="indexcontentresponsive">
+    <video autoplay loop muted playsinline>
+      <source src="pictures/Intro Video Focus Style_by Studio Last_Mobile.mp4" loading="eager" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+ 
+  // Einfaches Passwort
+  const correctPassword = "stl25"; // <--- Dein Passwort hier
+
+  // Passwortabfrage beim Laden
+  window.onload = function () {
+   var password = prompt("Bitte Passwort eingeben:");
+
+    if ("stl25" === correctPassword) {
+      document.getElementById("content").style.display = "block";
+
+      // Redirect nach 15 Sekunden
+      setTimeout(function () {
+        //window.location.href = "landing.html";
+      }, 1000);
+
+      // URL säubern
+      var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');
+      window.history.replaceState({}, document.title, newUrl);
+    } else {
+      document.body.innerHTML = "<h2>Falsches Passwort.</h2>";
+    }
+  };
+</script>
+
+</body>
+</html>

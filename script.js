@@ -101,35 +101,38 @@ function mobileScrollEffect() {
     window.scrollTo(0, 0);
     const row1 = document.querySelector(".row1");
     const row2 = document.querySelector(".row2");
-    
     if (!row1 || !row2) return;
 
-    let isUserTouching = false;
-    let requestId;
+    let isUserScrolling = false;
+    let scrollTimeout;
 
-    // Detect user interaction to pause auto-scroll
-    row1.addEventListener("touchstart", () => isUserTouching = true, { passive: true });
-    row1.addEventListener("touchend", () => isUserTouching = false, { passive: true });
+    // Detect when the user starts touching/scrolling
+    row1.addEventListener("scroll", () => {
+        isUserScrolling = true;
+        
+        // Sync the rows manually ONLY when the user is scrolling
+        row2.scrollLeft = row1.scrollLeft;
 
+        // Reset the "user is scrolling" flag after a short delay (the momentum window)
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            isUserScrolling = false;
+        }, 150); // 150ms is enough to cover the "inertia" phase
+    }, { passive: true });
+
+    // Auto-scroll loop
     function update() {
-        // 1. Handle Auto-scroll ONLY if user is not touching
-        if (!isUserTouching) {
-            row1.scrollLeft += 2; // speed
-            
-            // Reset if reach end
+        // Only auto-scroll if the user IS NOT touching/sliding
+        if (!isUserScrolling) {
+            row1.scrollLeft += 2;
+            row2.scrollLeft = row1.scrollLeft;
             if (row1.scrollLeft >= row1.scrollWidth - row1.clientWidth) {
                 row1.scrollLeft = 0;
             }
         }
-
-        // 2. Sync row2 to row1 (Master-Slave)
-        // We set row2 to match row1's current position
-        row2.scrollLeft = row1.scrollLeft;
-
-        requestId = requestAnimationFrame(update);
+        requestAnimationFrame(update);
     }
-
-    requestId = requestAnimationFrame(update);
+    requestAnimationFrame(update);
 }
 
 // Die URL ohne den Dateinamen "homepage.html"

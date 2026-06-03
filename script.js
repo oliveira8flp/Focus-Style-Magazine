@@ -119,20 +119,6 @@ function mobileScrollEffect() {
             isUserScrolling = false;
         }, 150); // 150ms is enough to cover the "inertia" phase
     }, { passive: true });
-
-    // Auto-scroll loop
-    function update() {
-        // Only auto-scroll if the user IS NOT touching/sliding
-        if (!isUserScrolling) {
-            row1.scrollLeft += 2;
-            row2.scrollLeft = row1.scrollLeft;
-            if (row1.scrollLeft >= row1.scrollWidth - row1.clientWidth) {
-                row1.scrollLeft = 0;
-            }
-        }
-        requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
 }
 
 // Die URL ohne den Dateinamen "homepage.html"

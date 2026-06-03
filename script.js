@@ -117,7 +117,7 @@ function mobileScrollEffect() {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
             isUserScrolling = false;
-        }, 150); // 150ms is enough to cover the "inertia" phase
+        }, 1500); // 150ms is enough to cover the "inertia" phase
     }, { passive: true });
 }
 

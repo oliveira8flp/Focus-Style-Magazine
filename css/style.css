@@ -28,6 +28,7 @@ header{
     overflow: hidden; /* STOP using scroll, use hidden */
     -webkit-overflow-scrolling: auto; /* Remove the touch-scroll engine */
     will-change: transform; /* Promote to GPU layer */
+    animation: none;
 }
 }
 

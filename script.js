@@ -98,27 +98,36 @@ function desktopScrollEffect() {
 }
 
 function mobileScrollEffect() {
-    window.scrollTo(0, 0);
     const row1 = document.querySelector(".row1");
     const row2 = document.querySelector(".row2");
-    if (!row1 || !row2) return;
+    
+    let isUserActive = false;
+    let autoScrollTimer;
 
-    let isUserScrolling = false;
-    let scrollTimeout;
+    // The logic to move the content
+    function autoScroll() {
+        if (!isUserActive) {
+            row1.scrollLeft += 1; // Slow, gentle movement
+            row2.scrollLeft = row1.scrollLeft;
+            requestAnimationFrame(autoScroll);
+        }
+    }
 
-    // Detect when the user starts touching/scrolling
-    row1.addEventListener("scroll", () => {
-        isUserScrolling = true;
-        
-        // Sync the rows manually ONLY when the user is scrolling
-        row2.scrollLeft = row1.scrollLeft;
-
-        // Reset the "user is scrolling" flag after a short delay (the momentum window)
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-            isUserScrolling = false;
-        }, 1500); // 150ms is enough to cover the "inertia" phase
+    // When the user touches, we PAUSE the auto-scroll
+    row1.addEventListener("touchstart", () => {
+        isUserActive = true;
+        cancelAnimationFrame(autoScroll); 
     }, { passive: true });
+
+    // When the user stops touching, we RESUME after a delay
+    row1.addEventListener("touchend", () => {
+        setTimeout(() => {
+            isUserActive = false;
+            autoScroll();
+        }, 2000); // Wait 2 seconds of inactivity before starting again
+    }, { passive: true });
+
+    autoScroll();
 }
 
 // Die URL ohne den Dateinamen "homepage.html"

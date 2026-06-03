@@ -97,37 +97,48 @@ function desktopScrollEffect() {
     });
 }
 
-function mobileScrollEffect() {
-    const row1 = document.querySelector(".row1");
-    const row2 = document.querySelector(".row2");
-    
-    let isUserActive = false;
-    let autoScrollTimer;
+document.addEventListener("DOMContentLoaded", () => {
+    // Replace your old call (mobileScrollEffect) with this:
+    initInfiniteTicker(".row1, .row2", 2); 
+});
 
-    // The logic to move the content
-    function autoScroll() {
-        if (!isUserActive) {
-            row1.scrollLeft += 1; // Slow, gentle movement
-            row2.scrollLeft = row1.scrollLeft;
-            requestAnimationFrame(autoScroll);
+function initInfiniteTicker(selector, speed = 2) {
+    const containers = document.querySelectorAll(selector);
+
+    containers.forEach(container => {
+        let scrollPos = 0;
+        let isUserScrolling = false;
+        let inactivityTimeout;
+
+        function update() {
+            if (!isUserScrolling) {
+                // Auto-scroll logic
+                scrollPos += speed;
+                container.scrollLeft = scrollPos;
+
+                // Reset loop seamlessly
+                if (container.scrollLeft >= (container.scrollWidth / 2)) {
+                    scrollPos = 0;
+                }
+            }
+            requestAnimationFrame(update);
         }
-    }
 
-    // When the user touches, we PAUSE the auto-scroll
-    row1.addEventListener("touchstart", () => {
-        isUserActive = true;
-        cancelAnimationFrame(autoScroll); 
-    }, { passive: true });
+        // Detect touch/mouse interaction
+        container.addEventListener("touchstart", () => {
+            isUserScrolling = true;
+            clearTimeout(inactivityTimeout);
+        }, { passive: true });
 
-    // When the user stops touching, we RESUME after a delay
-    row1.addEventListener("touchend", () => {
-        setTimeout(() => {
-            isUserActive = false;
-            autoScroll();
-        }, 2000); // Wait 2 seconds of inactivity before starting again
-    }, { passive: true });
+        container.addEventListener("touchend", () => {
+            // Wait for inertia to die down before resuming
+            inactivityTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 1000); 
+        }, { passive: true });
 
-    autoScroll();
+        requestAnimationFrame(update);
+    });
 }
 
 // Die URL ohne den Dateinamen "homepage.html"

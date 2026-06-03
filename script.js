@@ -22,7 +22,7 @@ function desktopScrollEffect() {
             target.scrollTop = source.scrollHeight - source.clientHeight - sourceCcrollTop;
         });
         setTimeout(function () {
-            isScrollingProgrammatically = false;
+            isScrollingProgrammatically = false;    
         }, scrollingTimeout);
     }
 
@@ -99,64 +99,38 @@ function desktopScrollEffect() {
 
 function mobileScrollEffect() {
     window.scrollTo(0, 0);
-    var allRow1 = document.querySelectorAll(".row1");
-    var allRow2 = document.querySelectorAll(".row2");
-    var isScrollingProgrammatically = false;
-    var scrollingTimeout = 0;
+    const row1 = document.querySelector(".row1");
+    const row2 = document.querySelector(".row2");
+    
+    if (!row1 || !row2) return;
 
-    if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
-        scrollingTimeout = 20;
-    }
-    if (navigator.userAgent.indexOf("Firefox") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
-        scrollingTimeout = 20;
-    }
+    let isUserTouching = false;
+    let requestId;
 
-    function syncScroll(event, source, targets, rows) {
-        isScrollingProgrammatically = true;
-        var sourceScrollLeft = parseInt(source.scrollLeft);
-        rows.forEach(function (row) {
-            row.scrollLeft = sourceScrollLeft;
-        });
-        targets.forEach(function (target) {
-            target.scrollLeft = source.scrollWidth - source.clientWidth - sourceScrollLeft;
-        });
-        setTimeout(function () {
-            isScrollingProgrammatically = false;
-        }, scrollingTimeout);
-    }
+    // Detect user interaction to pause auto-scroll
+    row1.addEventListener("touchstart", () => isUserTouching = true, { passive: true });
+    row1.addEventListener("touchend", () => isUserTouching = false, { passive: true });
 
-    // 🔥 Infinite auto scroll
-    function autoScroll() {
-        allRow1.forEach(function (row1) {
+    function update() {
+        // 1. Handle Auto-scroll ONLY if user is not touching
+        if (!isUserTouching) {
             row1.scrollLeft += 2; // speed
+            
             // Reset if reach end
             if (row1.scrollLeft >= row1.scrollWidth - row1.clientWidth) {
                 row1.scrollLeft = 0;
             }
-        });
-        requestAnimationFrame(autoScroll); // keep looping forever
+        }
+
+        // 2. Sync row2 to row1 (Master-Slave)
+        // We set row2 to match row1's current position
+        row2.scrollLeft = row1.scrollLeft;
+
+        requestId = requestAnimationFrame(update);
     }
 
-    autoScroll();
-
-    // Keep sync when user scrolls manually
-    allRow1.forEach(function (row1) {
-        row1.addEventListener("scroll", function (event) {
-            if (!isScrollingProgrammatically) {
-                syncScroll(event, row1, allRow2, allRow1);
-            }
-        });
-    });
-
-    allRow2.forEach(function (row2) {
-        row2.addEventListener("scroll", function (event) {
-            if (!isScrollingProgrammatically) {
-                syncScroll(event, row2, allRow1, allRow2);
-            }
-        });
-    });
+    requestId = requestAnimationFrame(update);
 }
-
 
 // Die URL ohne den Dateinamen "homepage.html"
 var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');

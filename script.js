@@ -1,6 +1,4 @@
 function desktopScrollEffect() {
-    //if (window.innerWidth <= 767) return // bail out on mobile
-
     window.scrollTo(0, 0);
     var allColumn1 = document.querySelectorAll(".column1");
     var allColumn2 = document.querySelectorAll(".column2");
@@ -8,10 +6,10 @@ function desktopScrollEffect() {
     var scrollingTimeout = 0;
 
     if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Chrome") == -1 && navigator.userAgent.indexOf("Chromium") == -1) {
-        scrollingTimeout = 0;
+        scrollingTimeout = 20;
     }
     if (navigator.userAgent.indexOf("Firefox") != -1 && navigator.userAgent.indexOf("Chrome") == -1 && navigator.userAgent.indexOf("Chromium") == -1) {
-        scrollingTimeout = 0;
+        scrollingTimeout = 20;
     }
 
     function syncScroll(event, source, targets, columns) {
@@ -24,14 +22,14 @@ function desktopScrollEffect() {
             target.scrollTop = source.scrollHeight - source.clientHeight - sourceCcrollTop;
         });
         setTimeout(function () {
-            isScrollingProgrammatically = false;    
+            isScrollingProgrammatically = false;
         }, scrollingTimeout);
     }
 
     // autoScroll function with smooth ease-out and the 492px final offset
     function autoScroll() {
-        const duration = 5000; // Duration of the animation
-        const startOffset =24000; // The absolute scroll position where the animation begins
+        const duration = 3000; // Duration of the animation
+        const startOffset =1500; // The absolute scroll position where the animation begins
         const finalOffset = 430; // The final resting position to hide the transparent image
         let startTime = null;
 
@@ -99,52 +97,66 @@ function desktopScrollEffect() {
     });
 }
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     if (window.innerWidth > 767) {
-//         desktopScrollEffect()
-//     }
-    
-//     initInfiniteTicker(".row1, .row2", 2)
-// })
+function mobileScrollEffect() {
+    window.scrollTo(0, 0);
+    var allRow1 = document.querySelectorAll(".row1");
+    var allRow2 = document.querySelectorAll(".row2");
+    var isScrollingProgrammatically = false;
+    var scrollingTimeout = 0;
 
-function initInfiniteTicker(selector, speed = 2) {
-    const containers = document.querySelectorAll(selector);
+    if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
+        scrollingTimeout = 20;
+    }
+    if (navigator.userAgent.indexOf("Firefox") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
+        scrollingTimeout = 20;
+    }
 
-    containers.forEach(container => {
-        let scrollPos = 0;
-        let isUserScrolling = false;
-        let inactivityTimeout;
+    function syncScroll(event, source, targets, rows) {
+        isScrollingProgrammatically = true;
+        var sourceScrollLeft = parseInt(source.scrollLeft);
+        rows.forEach(function (row) {
+            row.scrollLeft = sourceScrollLeft;
+        });
+        targets.forEach(function (target) {
+            target.scrollLeft = source.scrollWidth - source.clientWidth - sourceScrollLeft;
+        });
+        setTimeout(function () {
+            isScrollingProgrammatically = false;
+        }, scrollingTimeout);
+    }
 
-        function update() {
-            if (!isUserScrolling) {
-                // Auto-scroll logic
-                scrollPos += speed;
-                container.scrollLeft = scrollPos;
-
-                // Reset loop seamlessly
-                if (container.scrollLeft >= (container.scrollWidth / 2)) {
-                    scrollPos = 0;
-                }
+    // 🔥 Infinite auto scroll
+    function autoScroll() {
+        allRow1.forEach(function (row1) {
+            row1.scrollLeft += 2; // speed
+            // Reset if reach end
+            if (row1.scrollLeft >= row1.scrollWidth - row1.clientWidth) {
+                row1.scrollLeft = 0;
             }
-            requestAnimationFrame(update);
-        }
+        });
+        requestAnimationFrame(autoScroll); // keep looping forever
+    }
 
-        // Detect touch/mouse interaction
-        container.addEventListener("touchstart", () => {
-            isUserScrolling = true;
-            clearTimeout(inactivityTimeout);
-        }, { passive: true });
+    autoScroll();
 
-        container.addEventListener("touchend", () => {
-            // Wait for inertia to die down before resuming
-            inactivityTimeout = setTimeout(() => {
-                isUserScrolling = false;
-            }, 1000); 
-        }, { passive: true });
+    // Keep sync when user scrolls manually
+    allRow1.forEach(function (row1) {
+        row1.addEventListener("scroll", function (event) {
+            if (!isScrollingProgrammatically) {
+                syncScroll(event, row1, allRow2, allRow1);
+            }
+        });
+    });
 
-        requestAnimationFrame(update);
+    allRow2.forEach(function (row2) {
+        row2.addEventListener("scroll", function (event) {
+            if (!isScrollingProgrammatically) {
+                syncScroll(event, row2, allRow1, allRow2);
+            }
+        });
     });
 }
+
 
 // Die URL ohne den Dateinamen "homepage.html"
 var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');

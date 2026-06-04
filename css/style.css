@@ -108,9 +108,13 @@ header{
 }
 
 @media(max-width: 767px){
+    body{
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
     .column1, .column2 {
     display: flex;
-    overflow-x: auto; /* Required for native touch support */
+    overflow-y: scroll; /* Required for native touch support */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch; /* This is the secret sauce for Mobile inertia */
     scrollbar-width: none; /* Hide scrollbar */

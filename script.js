@@ -8,10 +8,10 @@ function desktopScrollEffect() {
     var scrollingTimeout = 0;
 
     if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Chrome") == -1 && navigator.userAgent.indexOf("Chromium") == -1) {
-        scrollingTimeout = 20;
+        scrollingTimeout = 0;
     }
     if (navigator.userAgent.indexOf("Firefox") != -1 && navigator.userAgent.indexOf("Chrome") == -1 && navigator.userAgent.indexOf("Chromium") == -1) {
-        scrollingTimeout = 20;
+        scrollingTimeout = 0;
     }
 
     function syncScroll(event, source, targets, columns) {
@@ -30,8 +30,8 @@ function desktopScrollEffect() {
 
     // autoScroll function with smooth ease-out and the 492px final offset
     function autoScroll() {
-        const duration = 3000; // Duration of the animation
-        const startOffset =1500; // The absolute scroll position where the animation begins
+        const duration = 5000; // Duration of the animation
+        const startOffset =2400; // The absolute scroll position where the animation begins
         const finalOffset = 430; // The final resting position to hide the transparent image
         let startTime = null;
 

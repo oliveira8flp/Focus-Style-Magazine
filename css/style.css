@@ -107,16 +107,19 @@ header{
     /* This tells the browser to prepare the GPU to move these layers */
 }
 
-@media(max-width: 767px){
-    body{
+@media (max-width: 767px) {
+    body {
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
     }
     .column1, .column2 {
-    display: flex;
-    overflow-y: scroll; /* Required for native touch support */
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /* This is the secret sauce for Mobile inertia */
-    scrollbar-width: none; /* Hide scrollbar */
-}
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -webkit-scrollbar: none;
+    }
+    .column1::-webkit-scrollbar,
+    .column2::-webkit-scrollbar {
+        display: none;
+    }
 }

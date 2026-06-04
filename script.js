@@ -97,47 +97,45 @@ function desktopScrollEffect() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Replace your old call (mobileScrollEffect) with this:
-    initInfiniteTicker(".row1, .row2", 2); 
-});
-
 function initInfiniteTicker(selector, speed = 2) {
     const containers = document.querySelectorAll(selector);
 
     containers.forEach(container => {
-        let scrollPos = 0;
         let isUserScrolling = false;
         let inactivityTimeout;
+        let animationId;
+        let scrollPos = 0;
 
-        function update() {
-            if (!isUserScrolling) {
-                // Auto-scroll logic
-                scrollPos += speed;
-                container.scrollLeft = scrollPos;
+        // Use CSS animation for auto-scroll — Safari handles this natively
+        container.style.cssText += `
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+        `;
 
-                // Reset loop seamlessly
-                if (container.scrollLeft >= (container.scrollWidth / 2)) {
-                    scrollPos = 0;
-                }
+        function autoScroll() {
+            scrollPos += speed;
+            if (scrollPos >= container.scrollWidth / 2) {
+                scrollPos = 0;
             }
-            requestAnimationFrame(update);
+            container.scrollLeft = scrollPos;
+            animationId = requestAnimationFrame(autoScroll);
         }
 
-        // Detect touch/mouse interaction
         container.addEventListener("touchstart", () => {
             isUserScrolling = true;
+            cancelAnimationFrame(animationId); // stop JS loop
             clearTimeout(inactivityTimeout);
         }, { passive: true });
 
         container.addEventListener("touchend", () => {
-            // Wait for inertia to die down before resuming
             inactivityTimeout = setTimeout(() => {
                 isUserScrolling = false;
-            }, 1000); 
+                scrollPos = container.scrollLeft; // sync position before resuming
+                autoScroll(); // resume from where Safari left off
+            }, 1500); // wait longer for momentum to finish
         }, { passive: true });
 
-        requestAnimationFrame(update);
+        autoScroll();
     });
 }
 

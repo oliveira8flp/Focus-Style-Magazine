@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tl.from(".fill-line", {scaleX: 0, duration: 1})
   .set(".loading-bar", {autoAlpha: 0}, ">")
-  .to(".counter-div", {display: "block"}, "<")
+  .to(".counter-div", {display: "flex"}, "<")
   .to(myCounter, {
     val: 0,                // Count down to 0
     duration: 1.1,          // Duration in seconds
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 }, "<")
   .set(".counter-div", {display: "none"}, ">")
-  .to(".cross-div", { display: "block" }, "<")
+  .to(".cross-div", { display: "flex" }, "<")
   .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1}, "<")
   .to(".cross-div path", { fill: "#db0e00", duration: 0.1}, ">")
   .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1}, ">")

@@ -1,5 +1,5 @@
 function desktopScrollEffect() {
-    if (window.innerWidth <= 767) return // bail out on mobile
+    //if (window.innerWidth <= 767) return // bail out on mobile
 
     window.scrollTo(0, 0);
     var allColumn1 = document.querySelectorAll(".column1");
@@ -31,7 +31,7 @@ function desktopScrollEffect() {
     // autoScroll function with smooth ease-out and the 492px final offset
     function autoScroll() {
         const duration = 5000; // Duration of the animation
-        const startOffset =2400; // The absolute scroll position where the animation begins
+        const startOffset =24000; // The absolute scroll position where the animation begins
         const finalOffset = 430; // The final resting position to hide the transparent image
         let startTime = null;
 
@@ -99,13 +99,13 @@ function desktopScrollEffect() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    if (window.innerWidth > 767) {
-        desktopScrollEffect()
-    }
+// document.addEventListener("DOMContentLoaded", () => {
+//     if (window.innerWidth > 767) {
+//         desktopScrollEffect()
+//     }
     
-    initInfiniteTicker(".row1, .row2", 2)
-})
+//     initInfiniteTicker(".row1, .row2", 2)
+// })
 
 function initInfiniteTicker(selector, speed = 2) {
     const containers = document.querySelectorAll(selector);

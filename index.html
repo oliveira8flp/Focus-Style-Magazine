@@ -130,7 +130,7 @@
 
     .preloader{
       display: flex;
-      background-color: #ffffff;
+      background-color: #000000;
       justify-content: center;
       align-items: center;
       position:absolute;
@@ -150,34 +150,43 @@
       height: 100%
     }
 
-    .loading-number{
-      padding-right: 12px;
+    .loading-bar{
+      width: 60%;
+      height: 2px
     }
 
-    .loading-number{
-      align-items: end;
+    .counter-div{
+      display:none;
+    }
+    .counter{
+      font-size: 320px
     }
 
-    .img-preloader{
-      width: 32%
+    .cross-div{
+      display:none;
+      transform-origin: center center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
     }
 
-    .counter-display{
-      font-size: 20px
+    .cross-div svg {
+        overflow: visible;
+        width:80%;
+        height:80%;
     }
     
 
     @media (max-width: 767px) {
-      .progress-main {
-        width: 220px;
+      .cross-div svg {
+        width:150%;
+        height:150%;
       }
 
-      .img-preloader{
-        width: 72%
-      }
-      .counter-display{
-      font-size: 16px
+      .counter{
+      font-size: 220px
     }
+
     }
 
   </style>
@@ -224,11 +233,22 @@
           <div class="one-third-loader">
 
           </div>
-          <div class="one-third-loader" style="perspective: 1000px">
-              <img class="img-preloader"src="pictures/preloader_logo.png"></img>
+          <div class="one-third-loader" style="position: relative;">
+              <div class="loading-bar" style="background-color: #454545">
+                <div class="fill-line" style="background-color: #db0e00; width: 100%; height: 100%; transform-origin: left;"></div>
+              </div>
+              <div class="counter-div" style="position: absolute;">
+                <p class="counter" style="color: #db0e00">10</p>
+              </div>
+              <div class="cross-div" style="position: absolute">
+                <svg viewBox="0 0 108 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 17L9 8.5L17.5 0L54 36.5L90.5 0L107.5 17L71.5 53L107.5 89L90.5 106L54 69.5L17.5 106L0.5 89L36.5 53L0.5 17Z"
+                  fill="#db0e00"/>
+                </svg>
+              </div>
           </div>      
-          <div class="one-third-loader loading-number">
-            <p class="counter-display">0%</p>
+          <div class="one-third-loader">
+            
           </div>
         </div>
 

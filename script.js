@@ -6,10 +6,10 @@ function desktopScrollEffect() {
     var scrollingTimeout = 0;
 
     if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Chrome") == -1 && navigator.userAgent.indexOf("Chromium") == -1) {
-        scrollingTimeout = 25;
+        scrollingTimeout = 30;
     }
     if (navigator.userAgent.indexOf("Firefox") != -1 && navigator.userAgent.indexOf("Chrome") == -1 && navigator.userAgent.indexOf("Chromium") == -1) {
-        scrollingTimeout = 25;
+        scrollingTimeout = 30;
     }
 
     function syncScroll(event, source, targets, columns) {

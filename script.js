@@ -1,4 +1,6 @@
 function desktopScrollEffect() {
+    if (window.innerWidth <= 767) return // bail out on mobile
+
     window.scrollTo(0, 0);
     var allColumn1 = document.querySelectorAll(".column1");
     var allColumn2 = document.querySelectorAll(".column2");
@@ -22,7 +24,7 @@ function desktopScrollEffect() {
             target.scrollTop = source.scrollHeight - source.clientHeight - sourceCcrollTop;
         });
         setTimeout(function () {
-            isScrollingProgrammatically = false;
+            isScrollingProgrammatically = false;    
         }, scrollingTimeout);
     }
 
@@ -97,66 +99,52 @@ function desktopScrollEffect() {
     });
 }
 
-function mobileScrollEffect() {
-    window.scrollTo(0, 0);
-    var allRow1 = document.querySelectorAll(".row1");
-    var allRow2 = document.querySelectorAll(".row2");
-    var isScrollingProgrammatically = false;
-    var scrollingTimeout = 0;
-
-    if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
-        scrollingTimeout = 20;
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth > 767) {
+        desktopScrollEffect()
     }
-    if (navigator.userAgent.indexOf("Firefox") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
-        scrollingTimeout = 20;
-    }
+    
+    initInfiniteTicker(".row1, .row2", 2)
+})
 
-    function syncScroll(event, source, targets, rows) {
-        isScrollingProgrammatically = true;
-        var sourceScrollLeft = parseInt(source.scrollLeft);
-        rows.forEach(function (row) {
-            row.scrollLeft = sourceScrollLeft;
-        });
-        targets.forEach(function (target) {
-            target.scrollLeft = source.scrollWidth - source.clientWidth - sourceScrollLeft;
-        });
-        setTimeout(function () {
-            isScrollingProgrammatically = false;
-        }, scrollingTimeout);
-    }
+function initInfiniteTicker(selector, speed = 2) {
+    const containers = document.querySelectorAll(selector);
 
-    // 🔥 Infinite auto scroll
-    function autoScroll() {
-        allRow1.forEach(function (row1) {
-            row1.scrollLeft += 2; // speed
-            // Reset if reach end
-            if (row1.scrollLeft >= row1.scrollWidth - row1.clientWidth) {
-                row1.scrollLeft = 0;
+    containers.forEach(container => {
+        let scrollPos = 0;
+        let isUserScrolling = false;
+        let inactivityTimeout;
+
+        function update() {
+            if (!isUserScrolling) {
+                // Auto-scroll logic
+                scrollPos += speed;
+                container.scrollLeft = scrollPos;
+
+                // Reset loop seamlessly
+                if (container.scrollLeft >= (container.scrollWidth / 2)) {
+                    scrollPos = 0;
+                }
             }
-        });
-        requestAnimationFrame(autoScroll); // keep looping forever
-    }
+            requestAnimationFrame(update);
+        }
 
-    autoScroll();
+        // Detect touch/mouse interaction
+        container.addEventListener("touchstart", () => {
+            isUserScrolling = true;
+            clearTimeout(inactivityTimeout);
+        }, { passive: true });
 
-    // Keep sync when user scrolls manually
-    allRow1.forEach(function (row1) {
-        row1.addEventListener("scroll", function (event) {
-            if (!isScrollingProgrammatically) {
-                syncScroll(event, row1, allRow2, allRow1);
-            }
-        });
-    });
+        container.addEventListener("touchend", () => {
+            // Wait for inertia to die down before resuming
+            inactivityTimeout = setTimeout(() => {
+                isUserScrolling = false;
+            }, 1000); 
+        }, { passive: true });
 
-    allRow2.forEach(function (row2) {
-        row2.addEventListener("scroll", function (event) {
-            if (!isScrollingProgrammatically) {
-                syncScroll(event, row2, allRow1, allRow2);
-            }
-        });
+        requestAnimationFrame(update);
     });
 }
-
 
 // Die URL ohne den Dateinamen "homepage.html"
 var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');

@@ -122,8 +122,4 @@ header{
     .column2::-webkit-scrollbar {
         display: none;
     }
-    .column1 .inner-content {
-        /* The space tells CSS: "find the inner-content div that is inside column1" */
-        transform: translateY(-240px);
-    }
 }

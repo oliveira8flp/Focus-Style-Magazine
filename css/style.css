@@ -124,6 +124,6 @@ header{
     }
     .column1 .inner-content {
         /* The space tells CSS: "find the inner-content div that is inside column1" */
-        transform: translateY(-120px);
+        transform: translateY(-240px);
     }
 }

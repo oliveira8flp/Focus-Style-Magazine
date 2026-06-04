@@ -22,7 +22,7 @@ function desktopScrollEffect() {
             target.scrollTop = source.scrollHeight - source.clientHeight - sourceCcrollTop;
         });
         setTimeout(function () {
-            isScrollingProgrammatically = false;    
+            isScrollingProgrammatically = false;
         }, scrollingTimeout);
     }
 
@@ -97,47 +97,66 @@ function desktopScrollEffect() {
     });
 }
 
-function initInfiniteTicker(selector, speed = 2) {
-    const containers = document.querySelectorAll(selector);
+function mobileScrollEffect() {
+    window.scrollTo(0, 0);
+    var allRow1 = document.querySelectorAll(".row1");
+    var allRow2 = document.querySelectorAll(".row2");
+    var isScrollingProgrammatically = false;
+    var scrollingTimeout = 0;
 
-    containers.forEach(container => {
-        let isUserScrolling = false;
-        let inactivityTimeout;
-        let animationId;
-        let scrollPos = 0;
+    if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
+        scrollingTimeout = 20;
+    }
+    if (navigator.userAgent.indexOf("Firefox") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
+        scrollingTimeout = 20;
+    }
 
-        // Use CSS animation for auto-scroll — Safari handles this natively
-        container.style.cssText += `
-            overflow-x: scroll;
-            -webkit-overflow-scrolling: touch;
-        `;
+    function syncScroll(event, source, targets, rows) {
+        isScrollingProgrammatically = true;
+        var sourceScrollLeft = parseInt(source.scrollLeft);
+        rows.forEach(function (row) {
+            row.scrollLeft = sourceScrollLeft;
+        });
+        targets.forEach(function (target) {
+            target.scrollLeft = source.scrollWidth - source.clientWidth - sourceScrollLeft;
+        });
+        setTimeout(function () {
+            isScrollingProgrammatically = false;
+        }, scrollingTimeout);
+    }
 
-        function autoScroll() {
-            scrollPos += speed;
-            if (scrollPos >= container.scrollWidth / 2) {
-                scrollPos = 0;
+    // 🔥 Infinite auto scroll
+    function autoScroll() {
+        allRow1.forEach(function (row1) {
+            row1.scrollLeft += 2; // speed
+            // Reset if reach end
+            if (row1.scrollLeft >= row1.scrollWidth - row1.clientWidth) {
+                row1.scrollLeft = 0;
             }
-            container.scrollLeft = scrollPos;
-            animationId = requestAnimationFrame(autoScroll);
-        }
+        });
+        requestAnimationFrame(autoScroll); // keep looping forever
+    }
 
-        container.addEventListener("touchstart", () => {
-            isUserScrolling = true;
-            cancelAnimationFrame(animationId); // stop JS loop
-            clearTimeout(inactivityTimeout);
-        }, { passive: true });
+    autoScroll();
 
-        container.addEventListener("touchend", () => {
-            inactivityTimeout = setTimeout(() => {
-                isUserScrolling = false;
-                scrollPos = container.scrollLeft; // sync position before resuming
-                autoScroll(); // resume from where Safari left off
-            }, 1500); // wait longer for momentum to finish
-        }, { passive: true });
+    // Keep sync when user scrolls manually
+    allRow1.forEach(function (row1) {
+        row1.addEventListener("scroll", function (event) {
+            if (!isScrollingProgrammatically) {
+                syncScroll(event, row1, allRow2, allRow1);
+            }
+        });
+    });
 
-        autoScroll();
+    allRow2.forEach(function (row2) {
+        row2.addEventListener("scroll", function (event) {
+            if (!isScrollingProgrammatically) {
+                syncScroll(event, row2, allRow1, allRow2);
+            }
+        });
     });
 }
+
 
 // Die URL ohne den Dateinamen "homepage.html"
 var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');

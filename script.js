@@ -32,7 +32,7 @@ function desktopScrollEffect() {
         //const startOffset =24000; // The absolute scroll position where the animation begins
         //const finalOffset = 430; // The final resting position to hide the transparent image
         const duration = 3000; // Duration of the animation
-        const startOffset =1500; // The absolute scroll position where the animation begins
+        const startOffset =3000; // The absolute scroll position where the animation begins
         const finalOffset = 430; // The final resting position to hide the transparent image
         let startTime = null;
 

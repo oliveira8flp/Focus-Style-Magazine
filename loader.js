@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
   .to(".cross-div path", { fill: "#E52F25", duration: 0.1}, ">")
   .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1}, ">")
   .to(".cross-div path", { fill: "#E52F25", duration: 0.1}, ">")
+  .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1,}, ">")
+  .to(".cross-div path", { fill: "#E52F25", duration: 0.1}, ">")
+  .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1}, ">")
+  .to(".cross-div path", { fill: "#E52F25", duration: 0.1}, ">")
   .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1, onComplete: () => {
     // This will trigger once the GSAP animation finishes
     if (typeof desktopScrollEffect === 'function') {
@@ -36,10 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("desktopScrollEffect is not defined!");
     }
   }}, ">")
-  .to(".cross-div path", { fill: "#E52F25", duration: 0.1}, ">")
-  .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1}, ">")
-  .to(".cross-div path", { fill: "#E52F25", duration: 0.1}, ">")
-  .to(".cross-div path", { fill: "#FFFFFF", duration: 0.1}, ">")
-  .to(".cross-div path", {scale: 26, duration: 1.5, transformOrigin: "center center"}, ">")
-  .to(".preloader", {autoAlpha: 0}, "<1.2")
+  .to(".cross-div path", {scale: 26, duration: 1.5, transformOrigin: "center center",}, ">")
+  .to(".preloader", {autoAlpha: 0}, "<1.25")
 })

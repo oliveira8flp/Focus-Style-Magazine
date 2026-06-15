@@ -100,67 +100,6 @@ function desktopScrollEffect() {
     });
 }
 
-// function mobileScrollEffect() {
-//     window.scrollTo(0, 0);
-//     var allRow1 = document.querySelectorAll(".row1");
-//     var allRow2 = document.querySelectorAll(".row2");
-//     var isScrollingProgrammatically = false;
-//     var scrollingTimeout = 0;
-
-//     if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
-//         scrollingTimeout = 20;
-//     }
-//     if (navigator.userAgent.indexOf("Firefox") !== -1 && navigator.userAgent.indexOf("Chrome") === -1 && navigator.userAgent.indexOf("Chromium") === -1) {
-//         scrollingTimeout = 20;
-//     }
-
-//     function syncScroll(event, source, targets, rows) {
-//         isScrollingProgrammatically = true;
-//         var sourceScrollLeft = parseInt(source.scrollLeft);
-//         rows.forEach(function (row) {
-//             row.scrollLeft = sourceScrollLeft;
-//         });
-//         targets.forEach(function (target) {
-//             target.scrollLeft = source.scrollWidth - source.clientWidth - sourceScrollLeft;
-//         });
-//         setTimeout(function () {
-//             isScrollingProgrammatically = false;
-//         }, scrollingTimeout);
-//     }
-
-//     // 🔥 Infinite auto scroll
-//     function autoScroll() {
-//         allRow1.forEach(function (row1) {
-//             row1.scrollLeft += 2; // speed
-//             // Reset if reach end
-//             if (row1.scrollLeft >= row1.scrollWidth - row1.clientWidth) {
-//                 row1.scrollLeft = 0;
-//             }
-//         });
-//         requestAnimationFrame(autoScroll); // keep looping forever
-//     }
-
-//     autoScroll();
-
-//     // Keep sync when user scrolls manually
-//     allRow1.forEach(function (row1) {
-//         row1.addEventListener("scroll", function (event) {
-//             if (!isScrollingProgrammatically) {
-//                 syncScroll(event, row1, allRow2, allRow1);
-//             }
-//         });
-//     });
-
-//     allRow2.forEach(function (row2) {
-//         row2.addEventListener("scroll", function (event) {
-//             if (!isScrollingProgrammatically) {
-//                 syncScroll(event, row2, allRow1, allRow2);
-//             }
-//         });
-//     });
-// }
-
-
 // Die URL ohne den Dateinamen "homepage.html"
 var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');
 // Ändern der URL

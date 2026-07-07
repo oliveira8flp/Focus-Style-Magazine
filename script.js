@@ -100,10 +100,10 @@ function desktopScrollEffect() {
     });
 }
 
-// Die URL ohne den Dateinamen "homepage.html"
-var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');
-// Ändern der URL
-window.history.replaceState({}, document.title, newUrl);
+if (window.location.pathname.endsWith('.html')) {
+    var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace('.html', '');
+    window.history.replaceState({}, document.title, newUrl);
+}
 
 function showImage(src) {
     var overlay = document.createElement('div');
@@ -203,12 +203,3 @@ function trackHorizontalScrollDirection(el) {
 
 document.querySelectorAll(".projectrow .row1, .projectrow .row2").forEach(trackHorizontalScrollDirection);
 
-// This intercepts link clicks to prevent the .html from showing 
-// in the address bar when navigating between your pages.
-document.addEventListener('click', (e) => {
-  if (e.target.tagName === 'A' && e.target.href.includes('.html')) {
-    e.preventDefault();
-    const cleanUrl = e.target.href.replace('.html', '');
-    window.location.href = cleanUrl;
-  }
-});

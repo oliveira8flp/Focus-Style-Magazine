@@ -104,6 +104,12 @@ var newUrl = window.location.protocol + "//" + window.location.host + window.loc
 // Ändern der URL
 window.history.replaceState({}, document.title, newUrl);
 
+// Remove .html from any URL that ends in .html
+if (window.location.pathname.endsWith('.html')) {
+    var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace('.html', '');
+    window.history.replaceState({}, document.title, newUrl);
+}
+
 function showImage(src) {
     var overlay = document.createElement('div');
     overlay.className = 'overlay';

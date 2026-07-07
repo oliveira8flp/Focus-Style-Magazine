@@ -100,10 +100,21 @@ function desktopScrollEffect() {
     });
 }
 
-if (window.location.pathname.endsWith('.html')) {
-    var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace('.html', '');
-    window.history.replaceState({}, document.title, newUrl);
-}
+// Universal Pretty URL cleaner
+(function() {
+    var path = window.location.pathname;
+    
+    // Check if the path ends with .html OR is specifically index.html
+    if (path.endsWith('.html')) {
+        // Strip .html from anything (e.g., /about.html -> /about)
+        var newPath = path.replace(/\.html$/, '');
+        window.history.replaceState({}, document.title, window.location.protocol + "//" + window.location.host + newPath);
+    } else if (path.endsWith('/index.html')) {
+        // Specifically force index.html to just a trailing slash (/)
+        var homePath = path.replace(/\/index\.html$/, '/');
+        window.history.replaceState({}, document.title, window.location.protocol + "//" + window.location.host + homePath);
+    }
+})();
 
 function showImage(src) {
     var overlay = document.createElement('div');

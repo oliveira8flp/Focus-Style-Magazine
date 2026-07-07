@@ -100,22 +100,9 @@ function desktopScrollEffect() {
     });
 }
 
-// Universal Pretty URL cleaner
-(function() {
-    var path = window.location.pathname;
-    
-    // Check if the path ends with .html OR is specifically index.html
-    if (path.endsWith('.html')) {
-        // Strip .html from anything (e.g., /about.html -> /about)
-        var newPath = path.replace(/\.html$/, '');
-        window.history.replaceState({}, document.title, window.location.protocol + "//" + window.location.host + newPath);
-    } else if (path.endsWith('/index')) {
-        // Specifically force index.html to just a trailing slash (/)
-        var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');
-        // Ändern der URL
-        window.history.replaceState({}, document.title, newUrl);
-    }
-})();
+var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname.replace(/\/index\.html$/, '/');
+// Ändern der URL
+window.history.replaceState({}, document.title, newUrl);
 
 function showImage(src) {
     var overlay = document.createElement('div');

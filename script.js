@@ -202,3 +202,13 @@ function trackHorizontalScrollDirection(el) {
 }
 
 document.querySelectorAll(".projectrow .row1, .projectrow .row2").forEach(trackHorizontalScrollDirection);
+
+// This intercepts link clicks to prevent the .html from showing 
+// in the address bar when navigating between your pages.
+document.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A' && e.target.href.includes('.html')) {
+    e.preventDefault();
+    const cleanUrl = e.target.href.replace('.html', '');
+    window.location.href = cleanUrl;
+  }
+});

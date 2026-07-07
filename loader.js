@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. Define the starting and ending values
   const myCounter = { val: 10 };
 
-  tl.from(".fill-line", {scaleX: 0, duration: 1})
+  tl.to(".initial-cover", {autoAlpha: 0})
+  .from(".fill-line", {scaleX: 0, duration: 1})
   .set(".loading-bar", {autoAlpha: 0}, ">")
   .to(".counter-div", {display: "flex"}, "<")
   .to(myCounter, {

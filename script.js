@@ -109,7 +109,7 @@ function desktopScrollEffect() {
         // Strip .html from anything (e.g., /about.html -> /about)
         var newPath = path.replace(/\.html$/, '');
         window.history.replaceState({}, document.title, window.location.protocol + "//" + window.location.host + newPath);
-    } else if (path.endsWith('/index.html')) {
+    } else if (path.endsWith('/index')) {
         // Specifically force index.html to just a trailing slash (/)
         var homePath = path.replace(/\/index\.html$/, '/');
         window.history.replaceState({}, document.title, window.location.protocol + "//" + window.location.host + homePath);

@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const counterElement = document.querySelector(".counter");
   const body = document.querySelector("body");
   gsap.set(body, { overflowY: "hidden" });
+  gsap.set(".initial-cover", {autoAlpha: 1})
   
   // 2. Define the starting and ending values
   const myCounter = { val: 10 };

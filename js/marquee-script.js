@@ -1,3 +1,4 @@
+setTimeout(() => { 
 gsap.registerPlugin(Draggable);
 
 if (jQuery(".news_ticker").length > 0) {
@@ -32,8 +33,7 @@ if (jQuery(".news_ticker").length > 0) {
     });
 
     return tl;
-  });
-
+  });  
   function horizontalLoop(items, config) {
     items = gsap.utils.toArray(items);
     config = config || {};
@@ -134,7 +134,7 @@ if (jQuery(".news_ticker").length > 0) {
     return tl;
   }
 }
-
+},1500);
 /**
  * ✅ Remove this duplicated init block (it does nothing and can cause confusion)
  *

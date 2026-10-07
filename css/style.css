@@ -122,4 +122,8 @@ header{
     .column2::-webkit-scrollbar {
         display: none;
     }
+
+    .spacing-start{
+        display: none;
+    }
 }

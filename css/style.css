@@ -91,6 +91,7 @@ header{
     height: auto;
     aspect-ratio: 428 / 660; /* Use the ratio of your source images */
     object-fit: contain;
+    object-position: center bottom;
     background: transparent;
 }
 
@@ -99,6 +100,7 @@ header{
     height: auto;
     aspect-ratio: 428 / 660; /* Use the ratio of your source images */
     object-fit: contain;
+    object-position: center bottom;
     background: transparent;
 }
 
